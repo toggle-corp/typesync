@@ -511,6 +511,8 @@ class TypesyncImpl implements Typesync {
     if (filePaths.length === 0) {
       throw new DefinitionFilesNotFoundError(globPattern);
     }
+    // NOTE: Sorting file paths for stable generation
+    filePaths.sort();
     return filePaths as [string, ...string[]];
   }
 }
