@@ -191,7 +191,8 @@ class PythonRendererImpl implements PythonRenderer {
       if (attribute.optional) {
         const expression = python.expressionForType({
           type: 'simple-union',
-          variants: [python.UNDEFINED, attribute.type],
+          // NOTE: Optional means user can either not pass a key or pass null value
+          variants: [attribute.type, python.UNDEFINED, python.NONE],
         });
         b.append(`${this.indent(1)}${attribute.name}: ${expression.content} = ${undefinedSentinelName}`);
       } else {
