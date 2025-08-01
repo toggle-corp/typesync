@@ -39,11 +39,15 @@ export abstract class AbstractSchema<A extends AliasModel<unknown>, D extends Do
   private readonly documentModelsById: Map<string, D>;
 
   public get aliasModels() {
-    return Array.from(this.aliasModelsById.values()).sort((m1, m2) => m1.name.localeCompare(m2.name));
+    // NOTE: disabling sort to preserve the original ordering
+    // return Array.from(this.aliasModelsById.values()).sort((m1, m2) => m1.name.localeCompare(m2.name));
+    return Array.from(this.aliasModelsById.values());
   }
 
   public get documentModels() {
-    return Array.from(this.documentModelsById.values()).sort((m1, m2) => m1.name.localeCompare(m2.name));
+    // NOTE: disabling sort to preserve the original ordering
+    // return Array.from(this.documentModelsById.values()).sort((m1, m2) => m1.name.localeCompare(m2.name));
+    return Array.from(this.documentModelsById.values());
   }
 
   public constructor() {
