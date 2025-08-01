@@ -31,6 +31,7 @@
     "dist"
   ],
   "scripts": {
+    "prepare": "yarn run build",
     "build": "yarn run compile && yarn run bundle",
     "build-local": "tsc -p tsconfig.build.json && chmod +x lib/cli/index.js",
     "bundle": "yarn run bundle:api && yarn bundle:cli",
