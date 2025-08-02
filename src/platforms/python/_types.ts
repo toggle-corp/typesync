@@ -90,5 +90,6 @@ export interface ObjectClassAttribute {
   type: Type;
   name: string;
   optional: boolean;
+  deprecated: boolean;
   docs: string | null;
 }

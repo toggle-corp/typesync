@@ -71,8 +71,14 @@ describe('PythonGeneratorImpl', () => {
           modelType: {
             type: 'object-class',
             attributes: [
-              { name: 'id', docs: 'The ID of the project', optional: false, type: { type: 'str' } },
-              { name: 'completed', docs: 'Whether the project is completed', optional: false, type: { type: 'bool' } },
+              { name: 'id', docs: 'The ID of the project', optional: false, deprecated: false, type: { type: 'str' } },
+              {
+                name: 'completed',
+                docs: 'Whether the project is completed',
+                optional: false,
+                deprecated: false,
+                type: { type: 'bool' },
+              },
             ],
             additionalAttributes: false,
           },

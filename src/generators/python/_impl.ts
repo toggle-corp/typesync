@@ -248,6 +248,7 @@ class PythonGeneratorImpl implements PythonGenerator {
         type: flatTypeToPython(f.type),
         docs: f.docs,
         optional: f.optional,
+        deprecated: f.deprecated,
       })),
       additionalAttributes: type.additionalFields,
     };

@@ -170,6 +170,7 @@ export const type: z.ZodType<types.Type> = primitiveType
 export const objectField = z
   .object({
     type: type,
+    deprecated: z.boolean().optional().describe('Whether this field is deprecated. Defaults to false.'),
     optional: z.boolean().optional().describe('Whether this field is optional. Defaults to false.'),
     readonly: z
       .boolean()

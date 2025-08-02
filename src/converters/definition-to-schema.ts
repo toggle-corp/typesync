@@ -92,6 +92,7 @@ export function fieldToSchema(fieldName: string, field: definition.types.ObjectF
     type: typeToSchema(field.type),
     optional: !!field.optional,
     readonly: !!field.readonly,
+    deprecated: !!field.deprecated,
     docs: field.docs ?? null,
     name: fieldName,
   };

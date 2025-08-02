@@ -57,6 +57,7 @@ export function adjustSchemaForPython(prevSchema: schema.Schema): schema.python.
         name: r.field.name,
         optional: r.field.optional,
         readonly: r.field.readonly,
+        deprecated: r.field.deprecated,
         type: r.flattenResult.flattenedType,
       })),
       additionalFields: objectType.additionalFields,

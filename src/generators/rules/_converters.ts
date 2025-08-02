@@ -75,7 +75,7 @@ export function flatObjectTypeToRules(t: schema.rules.types.Object): rules.Objec
 }
 
 export function flatObjectFieldTypeToRules(t: schema.rules.types.ObjectField): rules.ObjectField {
-  return { type: flatTypeToRules(t.type), optional: t.optional, name: t.name };
+  return { type: flatTypeToRules(t.type), optional: t.optional, deprecated: t.deprecated, name: t.name };
 }
 
 export function flatDiscriminatedUnionTypeToRules(t: schema.rules.types.DiscriminatedUnion): rules.DiscriminatedUnion {

@@ -15,7 +15,9 @@ describe('readonlyFieldPredicateForType()', () => {
       elements: [
         {
           type: 'object',
-          fields: [{ name: 'role', type: { type: 'string' }, docs: null, optional: false, readonly: true }],
+          fields: [
+            { name: 'role', type: { type: 'string' }, docs: null, optional: false, deprecated: false, readonly: true },
+          ],
           additionalFields: false,
         },
         {
@@ -59,7 +61,9 @@ describe('readonlyFieldPredicateForType()', () => {
       type: 'list',
       elementType: {
         type: 'object',
-        fields: [{ name: 'role', type: { type: 'string' }, docs: null, optional: false, readonly: true }],
+        fields: [
+          { name: 'role', type: { type: 'string' }, docs: null, optional: false, deprecated: false, readonly: true },
+        ],
         additionalFields: false,
       },
     };
@@ -81,7 +85,9 @@ describe('readonlyFieldPredicateForType()', () => {
       type: 'map',
       valueType: {
         type: 'object',
-        fields: [{ name: 'role', type: { type: 'string' }, docs: null, optional: false, readonly: true }],
+        fields: [
+          { name: 'role', type: { type: 'string' }, docs: null, optional: false, deprecated: false, readonly: true },
+        ],
         additionalFields: false,
       },
     };
@@ -102,10 +108,31 @@ describe('readonlyFieldPredicateForType()', () => {
     const objectType: schema.rules.types.Object = {
       type: 'object',
       fields: [
-        { name: 'first_name', type: { type: 'string' }, docs: null, optional: false, readonly: false },
-        { name: 'last_name', type: { type: 'string' }, docs: null, optional: false, readonly: false },
-        { name: 'role', type: { type: 'string' }, docs: null, optional: false, readonly: true },
-        { name: 'created_at', type: { type: 'timestamp' }, docs: null, optional: false, readonly: true },
+        {
+          name: 'first_name',
+          type: { type: 'string' },
+          docs: null,
+          optional: false,
+          deprecated: false,
+          readonly: false,
+        },
+        {
+          name: 'last_name',
+          type: { type: 'string' },
+          docs: null,
+          optional: false,
+          deprecated: false,
+          readonly: false,
+        },
+        { name: 'role', type: { type: 'string' }, docs: null, optional: false, deprecated: false, readonly: true },
+        {
+          name: 'created_at',
+          type: { type: 'timestamp' },
+          docs: null,
+          optional: false,
+          deprecated: false,
+          readonly: true,
+        },
       ],
       additionalFields: false,
     };
@@ -134,20 +161,49 @@ describe('readonlyFieldPredicateForType()', () => {
     const objectType: schema.rules.types.Object = {
       type: 'object',
       fields: [
-        { name: 'first_name', type: { type: 'string' }, docs: null, optional: false, readonly: false },
-        { name: 'last_name', type: { type: 'string' }, docs: null, optional: false, readonly: false },
+        {
+          name: 'first_name',
+          type: { type: 'string' },
+          docs: null,
+          optional: false,
+          deprecated: false,
+          readonly: false,
+        },
+        {
+          name: 'last_name',
+          type: { type: 'string' },
+          docs: null,
+          optional: false,
+          deprecated: false,
+          readonly: false,
+        },
         {
           name: 'info',
           type: {
             type: 'object',
             fields: [
-              { name: 'role', type: { type: 'string' }, docs: null, optional: false, readonly: true },
-              { name: 'website_url', type: { type: 'string' }, docs: null, optional: true, readonly: false },
+              {
+                name: 'role',
+                type: { type: 'string' },
+                docs: null,
+                optional: false,
+                deprecated: false,
+                readonly: true,
+              },
+              {
+                name: 'website_url',
+                type: { type: 'string' },
+                docs: null,
+                optional: true,
+                deprecated: false,
+                readonly: false,
+              },
               {
                 name: 'metadata',
                 type: { type: 'map', valueType: { type: 'string' } },
                 docs: null,
                 optional: true,
+                deprecated: false,
                 readonly: true,
               },
             ],
@@ -155,9 +211,17 @@ describe('readonlyFieldPredicateForType()', () => {
           },
           docs: null,
           optional: false,
+          deprecated: false,
           readonly: false,
         },
-        { name: 'created_at', type: { type: 'timestamp' }, docs: null, optional: false, readonly: true },
+        {
+          name: 'created_at',
+          type: { type: 'timestamp' },
+          docs: null,
+          optional: false,
+          deprecated: false,
+          readonly: true,
+        },
       ],
       additionalFields: false,
     };
@@ -198,10 +262,31 @@ describe('readonlyFieldPredicateForType()', () => {
     const objectType: schema.rules.types.Object = {
       type: 'object',
       fields: [
-        { name: 'first_name', type: { type: 'string' }, docs: null, optional: false, readonly: false },
-        { name: 'last_name', type: { type: 'string' }, docs: null, optional: false, readonly: false },
-        { name: 'role', type: { type: 'string' }, docs: null, optional: false, readonly: false },
-        { name: 'created_at', type: { type: 'timestamp' }, docs: null, optional: false, readonly: false },
+        {
+          name: 'first_name',
+          type: { type: 'string' },
+          docs: null,
+          optional: false,
+          deprecated: false,
+          readonly: false,
+        },
+        {
+          name: 'last_name',
+          type: { type: 'string' },
+          docs: null,
+          optional: false,
+          deprecated: false,
+          readonly: false,
+        },
+        { name: 'role', type: { type: 'string' }, docs: null, optional: false, deprecated: false, readonly: false },
+        {
+          name: 'created_at',
+          type: { type: 'timestamp' },
+          docs: null,
+          optional: false,
+          deprecated: false,
+          readonly: false,
+        },
       ],
       additionalFields: false,
     };

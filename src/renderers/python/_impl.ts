@@ -194,8 +194,10 @@ class PythonRendererImpl implements PythonRenderer {
           // NOTE: Optional means user can either not pass a key or pass null value
           variants: [attribute.type, python.UNDEFINED, python.NONE],
         });
+        // FIXME: Add annotation for readonly
         b.append(`${this.indent(1)}${attribute.name}: ${expression.content} = ${undefinedSentinelName}`);
       } else {
+        // FIXME: Add annotation for readonly
         const expression = python.expressionForType(attribute.type);
         b.append(`${this.indent(1)}${attribute.name}: ${expression.content}`);
       }
