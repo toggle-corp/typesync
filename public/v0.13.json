@@ -317,6 +317,10 @@
                                     "type": {
                                       "$ref": "#/definitions/v0.13/additionalProperties/anyOf/0/properties/type/anyOf/0/anyOf/0/anyOf/0/anyOf/0/anyOf/0/anyOf/1/properties/elements/items"
                                     },
+                                    "deprecated": {
+                                      "type": "boolean",
+                                      "description": "Whether this field is deprecated. Defaults to false."
+                                    },
                                     "optional": {
                                       "type": "boolean",
                                       "description": "Whether this field is optional. Defaults to false."
