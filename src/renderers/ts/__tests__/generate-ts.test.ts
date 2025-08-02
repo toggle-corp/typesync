@@ -33,8 +33,8 @@ describe('TSRendererImpl', () => {
           modelType: {
             type: 'object',
             properties: [
-              { type: { type: 'string' }, name: 'name', docs: null, optional: false },
-              { type: { type: 'string' }, name: 'breed', docs: null, optional: false },
+              { type: { type: 'string' }, name: 'name', docs: null, deprecated: false, optional: false },
+              { type: { type: 'string' }, name: 'breed', docs: null, deprecated: false, optional: false },
             ],
             additionalProperties: false,
           },

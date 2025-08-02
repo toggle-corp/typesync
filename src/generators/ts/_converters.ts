@@ -75,7 +75,7 @@ export function objectTypeToTS(t: schema.ts.types.Object): ts.Object {
 }
 
 export function objectFieldTypeToTS(t: schema.ts.types.ObjectField): ts.ObjectProperty {
-  return { type: typeToTS(t.type), optional: t.optional, name: t.name, docs: t.docs };
+  return { type: typeToTS(t.type), optional: t.optional, deprecated: t.deprecated, name: t.name, docs: t.docs };
 }
 
 export function unionTypeToTS(t: schema.ts.types.Union): ts.Union {

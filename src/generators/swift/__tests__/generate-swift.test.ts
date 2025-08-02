@@ -31,10 +31,12 @@ describe('SwiftGeneratorImpl', () => {
           fields: {
             id: {
               type: 'string',
+              deprecated: false,
               docs: 'The ID of the project',
             },
             completed: {
               type: 'boolean',
+              deprecated: false,
               docs: 'Whether the project is completed',
             },
           },
@@ -76,12 +78,14 @@ describe('SwiftGeneratorImpl', () => {
                 originalName: 'id',
                 docs: 'The ID of the project',
                 optional: false,
+                deprecated: false,
                 type: { type: 'string' },
               },
               {
                 originalName: 'completed',
                 docs: 'Whether the project is completed',
                 optional: false,
+                deprecated: false,
                 type: { type: 'bool' },
               },
             ],

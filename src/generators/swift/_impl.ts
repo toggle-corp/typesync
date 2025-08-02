@@ -141,6 +141,7 @@ class SwiftGeneratorImpl implements SwiftGenerator {
           originalName: field.name,
           docs: field.docs,
           optional: field.optional,
+          deprecated: field.deprecated,
           type: flatTypeToSwift(field.type),
         });
       }

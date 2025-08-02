@@ -106,6 +106,7 @@ export interface LiteralStructProperty {
 export interface RegularStructProperty {
   readonly originalName: string;
   readonly optional: boolean;
+  readonly deprecated: boolean;
   readonly docs: string | null;
   readonly type: Type;
 }

@@ -65,6 +65,7 @@ export interface Object {
 export interface ObjectProperty {
   readonly type: Type;
   readonly optional: boolean;
+  readonly deprecated: boolean;
   readonly name: string;
   readonly docs: string | null;
 }
