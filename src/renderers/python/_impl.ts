@@ -213,9 +213,10 @@ class PythonRendererImpl implements PythonRenderer {
     b.append('\n');
 
     b.append(`${this.indent(1)}class Config:\n`);
-    b.append(`${this.indent(2)}use_enum_values = True\n`);
+    b.append(`${this.indent(2)}use_enum_values = False\n`);
     b.append(`${this.indent(2)}extra = '${modelType.additionalAttributes ? 'allow' : 'forbid'}'\n\n`);
 
+    b.append(`${this.indent(1)}@typing.override\n`);
     b.append(`${this.indent(1)}def __setattr__(self, name: str, value: typing.Any) -> None:\n`);
     modelType.attributes.forEach(attribute => {
       if (attribute.optional && !python.canBeNone(attribute.type)) {
